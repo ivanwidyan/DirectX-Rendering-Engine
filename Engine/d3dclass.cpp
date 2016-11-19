@@ -12,7 +12,7 @@ D3DClass::D3DClass()
 	m_rasterState = 0;
 }
 
-D3DClass::D3DClass(const D3DClass &)
+D3DClass::D3DClass(const D3DClass& other)
 {
 }
 
@@ -248,8 +248,8 @@ bool D3DClass::Initialize(int screenWidth, int screenHeight, bool vsync, HWND hw
 	depthStencilDesc.DepthFunc = D3D11_COMPARISON_LESS;
 
 	depthStencilDesc.StencilEnable = true;
-	depthStencilDesc.StencilReadMask = 0xff;
-	depthStencilDesc.StencilWriteMask = 0xff;
+	depthStencilDesc.StencilReadMask = 0xFF;
+	depthStencilDesc.StencilWriteMask = 0xFF;
 
 	// Stencil operations if pixel is front-facing
 	depthStencilDesc.FrontFace.StencilFailOp = D3D11_STENCIL_OP_KEEP;
@@ -265,7 +265,7 @@ bool D3DClass::Initialize(int screenWidth, int screenHeight, bool vsync, HWND hw
 
 	// Create the depth stencil state
 	result = m_device->CreateDepthStencilState(&depthStencilDesc, &m_depthStencilState);
-	if (FAILED(TRUE))
+	if (FAILED(result))
 	{
 		MessageBox(hwnd, L"Could not create Depth Stencil State", L"Error", MB_OK);
 		return false;
@@ -399,7 +399,6 @@ void D3DClass::Shutdown()
 	}
 
 	return;
-
 }
 
 void D3DClass::BeginScene(float red, float green, float blue, float alpha)

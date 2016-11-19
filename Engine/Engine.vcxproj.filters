@@ -30,6 +30,15 @@
     <ClCompile Include="d3dclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="colorshaderclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modelclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cameraclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="graphicsclass.h">
@@ -44,5 +53,18 @@
     <ClInclude Include="d3dclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="colorshaderclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modelclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cameraclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="color.psh" />
+    <FxCompile Include="color.vsh" />
   </ItemGroup>
 </Project>
