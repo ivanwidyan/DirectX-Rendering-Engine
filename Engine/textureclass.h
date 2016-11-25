@@ -34,6 +34,7 @@ private:
 	unsigned char* m_targaData;
 	ID3D11Texture2D* m_texture;
 	ID3D11ShaderResourceView* m_textureView;
+
 };
 
 #endif

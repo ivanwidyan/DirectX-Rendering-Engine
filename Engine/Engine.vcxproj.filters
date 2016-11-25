@@ -70,9 +70,14 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="color.psh" />
-    <FxCompile Include="color.vsh" />
-    <FxCompile Include="texture.vsh" />
-    <FxCompile Include="texture.psh" />
+    <Image Include="data\stone01.tga" />
+    <Image Include="data\brick\brick2-2.tga" />
+    <Image Include="data\brick\brick3.tga" />
+    <Image Include="data\brick\brick3b.tga" />
+    <Image Include="data\stone02.tga" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="texture.psh" />
+    <None Include="texture.vsh" />
   </ItemGroup>
 </Project>

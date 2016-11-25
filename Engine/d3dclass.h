@@ -1,17 +1,14 @@
 #ifndef _D3DCLASS_H_
 #define _D3DCLASS_H_
-// Contains all the Direct3D functionality for setting up
-// and drawing 3D graphics in DirectX 11
+
+// LINKING
 #pragma comment(lib, "d3d11.lib")
-// Contains tools to interface with the hardware on the computer
-// to obtain information about the refresh rate of the monitor, the video card being used, and so forth
 #pragma comment(lib, "dxgi.lib")
-// Contains functionality for commpiling shaders
 #pragma comment(lib, "d3dcompiler.lib")
 
-// Includes
+// INCLUDES
 #include <d3d11.h>
-#include <DirectXMath.h>
+#include <directxmath.h>
 using namespace DirectX;
 
 class D3DClass

@@ -1,11 +1,13 @@
 #ifndef _SYSTEMCLASS_H_
 #define _SYSTEMCLASS_H_
-// Pre-processing directives to speed up the build proccess
-// it reduces the size of Win32 header files by excluding some of the less used APIs
+
+// PRE-PROCESSING DIRECTIVES
 #define WIN32_LEAN_AND_MEAN
-// Includes
-#include <Windows.h> // use wind32 functions
-// My Class includes
+
+// INCLUDES
+#include <windows.h>
+
+// MY CLASS INCLUDES
 #include "inputclass.h"
 #include "graphicsclass.h"
 
@@ -13,7 +15,7 @@ class SystemClass
 {
 public:
 	SystemClass();
-	SystemClass(const SystemClass&); // Copy constructor
+	SystemClass(const SystemClass&);
 	~SystemClass();
 
 	bool Initialize();
@@ -36,10 +38,16 @@ private:
 	GraphicsClass* m_Graphics;
 };
 
-// Function Prototypes
+
+/////////////////////////
+// FUNCTION PROTOTYPES //
+/////////////////////////
 static LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
-// Globals
+
+/////////////
+// GLOBALS //
+/////////////
 static SystemClass* ApplicationHandle = 0;
 
 
