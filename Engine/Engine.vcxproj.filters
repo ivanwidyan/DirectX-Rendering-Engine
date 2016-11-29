@@ -39,7 +39,10 @@
     <ClCompile Include="textureclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="textureshaderclass.cpp">
+    <ClCompile Include="lightshaderclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lightclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,19 +68,18 @@
     <ClInclude Include="textureclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="textureshaderclass.h">
+    <ClInclude Include="lightshaderclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lightclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="data\stone01.tga" />
-    <Image Include="data\brick\brick2-2.tga" />
-    <Image Include="data\brick\brick3.tga" />
-    <Image Include="data\brick\brick3b.tga" />
-    <Image Include="data\stone02.tga" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="texture.psh" />
-    <None Include="texture.vsh" />
+    <None Include="light.vsh" />
+    <None Include="light.psh" />
   </ItemGroup>
 </Project>

@@ -149,7 +149,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cameraclass.cpp" />
-    <ClCompile Include="textureshaderclass.cpp" />
+    <ClCompile Include="lightclass.cpp" />
+    <ClCompile Include="lightshaderclass.cpp" />
     <ClCompile Include="d3dclass.cpp" />
     <ClCompile Include="graphicsclass.cpp" />
     <ClCompile Include="inputclass.cpp" />
@@ -160,7 +161,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cameraclass.h" />
-    <ClInclude Include="textureshaderclass.h" />
+    <ClInclude Include="lightclass.h" />
+    <ClInclude Include="lightshaderclass.h" />
     <ClInclude Include="d3dclass.h" />
     <ClInclude Include="graphicsclass.h" />
     <ClInclude Include="inputclass.h" />
@@ -169,15 +171,11 @@
     <ClInclude Include="textureclass.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="data\brick\brick2-2.tga" />
-    <Image Include="data\brick\brick3.tga" />
-    <Image Include="data\brick\brick3b.tga" />
     <Image Include="data\stone01.tga" />
-    <Image Include="data\stone02.tga" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="texture.psh" />
-    <None Include="texture.vsh" />
+    <None Include="light.psh" />
+    <None Include="light.vsh" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
