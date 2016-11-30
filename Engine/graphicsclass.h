@@ -2,6 +2,7 @@
 #define _GRAPHICSCLASS_H_
 
 // MY CLASS INCLUDES
+#include <DirectXMath.h>
 #include "d3dclass.h"
 #include "cameraclass.h"
 #include "modelclass.h"
@@ -27,6 +28,7 @@ public:
 
 private:
 	bool Render(float);
+	float rotation;
 
 private:
 	D3DClass* m_Direct3D;

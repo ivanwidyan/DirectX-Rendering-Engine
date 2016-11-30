@@ -84,7 +84,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	}
 
 	// Initialize the light object.
-	m_Light->SetDiffuseColor(1.f, 0.f, 1.f, 1.f);
+	m_Light->SetDiffuseColor(1.f, 0.f, 0.f, 1.f);
 	m_Light->SetDirection(0.f, 0.f, 1.f);
 
 	return true;
@@ -167,14 +167,13 @@ bool GraphicsClass::Render(float rotation)
 	m_Camera->Render();
 
 	// Get the world, view, and projection matrices from the camera and d3d objects.
+	
 	m_Direct3D->GetWorldMatrix(worldMatrix);
 	m_Camera->GetViewMatrix(viewMatrix);
 	m_Direct3D->GetProjectionMatrix(projectionMatrix);
 
 	// Rotate the world matrix by the rotation value so that triangle will spin
-	XMMatrixRotationY(rotation);
-	XMMatrixRotationX(rotation);
-	XMMatrixRotationZ(rotation);
+	worldMatrix = XMMatrixRotationY(rotation);
 
 	// Put the model vertex and index buffers on the graphics pipeline to prepare them for drawing.
 	m_Model->Render(m_Direct3D->GetDeviceContext());
