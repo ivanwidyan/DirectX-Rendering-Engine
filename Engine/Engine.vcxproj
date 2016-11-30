@@ -171,9 +171,6 @@
     <ClInclude Include="textureclass.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="data\stone01.tga" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="light.psh" />
     <None Include="light.vsh" />
   </ItemGroup>

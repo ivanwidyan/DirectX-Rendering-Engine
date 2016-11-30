@@ -2,7 +2,6 @@
 #define _GRAPHICSCLASS_H_
 
 // MY CLASS INCLUDES
-#include <DirectXMath.h>
 #include "d3dclass.h"
 #include "cameraclass.h"
 #include "modelclass.h"

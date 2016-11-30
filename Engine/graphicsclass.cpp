@@ -54,7 +54,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	}
 
 	// Initialize the model object.
-	result = m_Model->Initialize(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), "../Engine/data/stone01.tga");
+	result = m_Model->Initialize(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), "../Engine/data/cube.txt", "../Engine/data/stone01.tga");
 	if (!result)
 	{
 		MessageBox(hwnd, L"Could not initialize the model object.", L"Error", MB_OK);
@@ -84,7 +84,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	}
 
 	// Initialize the light object.
-	m_Light->SetDiffuseColor(1.f, 0.f, 0.f, 1.f);
+	m_Light->SetDiffuseColor(1.f, 1.f, 1.f, 1.f);
 	m_Light->SetDirection(0.f, 0.f, 1.f);
 
 	return true;
@@ -139,7 +139,7 @@ bool GraphicsClass::Frame()
 	static float rotation = 0.f;
 
 	// Update the rotation variable each frame
-	rotation += (float)XM_PI * 0.01f;
+	rotation += (float)XM_PI * 0.005f;
 	if (rotation > 360.f)
 	{
 		rotation -= 360.f;

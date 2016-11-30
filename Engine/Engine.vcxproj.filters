@@ -76,9 +76,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="data\stone01.tga" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="light.vsh" />
     <None Include="light.psh" />
   </ItemGroup>
