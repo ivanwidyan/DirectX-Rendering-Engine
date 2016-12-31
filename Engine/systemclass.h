@@ -39,15 +39,11 @@ private:
 };
 
 
-/////////////////////////
-// FUNCTION PROTOTYPES //
-/////////////////////////
+// FUNCTION PROTOTYPES
 static LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
 
-/////////////
-// GLOBALS //
-/////////////
+// GLOBALS
 static SystemClass* ApplicationHandle = 0;
 
 

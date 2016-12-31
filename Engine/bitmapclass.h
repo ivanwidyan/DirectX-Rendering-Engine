@@ -1,41 +1,32 @@
-#ifndef _MODELCLASS_H_
-#define _MODELCLASS_H_
+#ifndef _BITMAP_H_
+#define _BITMAP_H_
 
 // INCLUDES
 #include <d3d11.h>
 #include <directxmath.h>
-#include <fstream>
 using namespace DirectX;
 using namespace std;
 
 // MY CLASS INCLUDES
 #include "textureclass.h"
 
-class ModelClass
+class BitmapClass
 {
 private:
 	struct VertexType
 	{
 		XMFLOAT3 position;
 		XMFLOAT2 texture;
-		XMFLOAT3 normal;
-	};
-
-	struct ModelType
-	{
-		float x, y, z;
-		float tu, tv;
-		float nx, ny, nz;
 	};
 
 public:
-	ModelClass();
-	ModelClass(const ModelClass&);
-	~ModelClass();
+	BitmapClass();
+	BitmapClass(const BitmapClass&);
+	~BitmapClass();
 
-	bool Initialize(ID3D11Device*, ID3D11DeviceContext*, char*, char*);
+	bool Initialize(ID3D11Device*, ID3D11DeviceContext*, int, int, char*, int, int);
 	void Shutdown();
-	void Render(ID3D11DeviceContext*);
+	bool Render(ID3D11DeviceContext*, int, int);
 
 	int GetIndexCount();
 	ID3D11ShaderResourceView* GetTexture();
@@ -43,19 +34,20 @@ public:
 private:
 	bool InitializeBuffers(ID3D11Device*);
 	void ShutdownBuffers();
+	bool UpdateBuffers(ID3D11DeviceContext*, int, int);
 	void RenderBuffers(ID3D11DeviceContext*);
 
 	bool LoadTexture(ID3D11Device*, ID3D11DeviceContext*, char*);
 	void ReleaseTexture();
 
-	bool LoadModel(char*);
-	void ReleaseModel();
-
 private:
 	ID3D11Buffer *m_vertexBuffer, *m_indexBuffer;
 	int m_vertexCount, m_indexCount;
 	TextureClass* m_Texture;
-	ModelType* m_model;
+	
+	int m_screenWidth, m_screenHeight;
+	int m_bitmapWidth, m_bitmapHeight;
+	int m_previousPosX, m_previousPosY;
 };
 
 #endif
